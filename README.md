@@ -4,6 +4,13 @@
 should be responsive, catering to screens from small mobile phones to large desktop screens. The
 admin system must have 3 pages viz: Dashboard, Enquiries List and Single Enquiry Page. `
 
+### Screenshots
+#### Dashboard
+![image](https://github.com/user-attachments/assets/9e4178ff-3c9e-4f61-ac3e-02fabf9ef311)
+
+#### Enquiries Page
+![image](https://github.com/user-attachments/assets/97c8e71b-cb5f-4e44-910c-0bf304dc9bcd)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
