@@ -1,0 +1,101 @@
+<app-main-header></app-main-header>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Enquiries List</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Enquiries</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- /.col -->
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">All Enquiries</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Phone Number</th>
+                                        <th>Email Address</th>
+                                        <th>Message</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of enquiries.data">
+                                        <td>{{item.id}}</td>
+                                        <td>{{item.firstName}}</td>
+                                        <td>{{item.lastName}}</td>
+                                        <td>{{item.phoneNumber}}</td>
+                                        <td>{{item.email}}</td>
+                                        <td>{{item.message}}</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" (click)="viewEnquiry(item.id)">
+                                                <i class="fas fa-play"></i>
+                                            </button>&nbsp;
+
+                                            <button class="btn btn-success btn-sm" (click)="editEnquiry(item.id)">
+                                                <i class="fas fa-pencil-alt"></i>
+                                            </button>
+
+                                            <button class="btn btn-danger btn-sm ml-2" (click)="deleteEnquiry(item.id)">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{ enquiry.name }}",
+    "description": "{{ enquiry.message }}",
+    "sku": "{{ enquiry.id }}",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "0.00"
+    }
+  }
+</script>
+
+<app-main-sidebar></app-main-sidebar>
+<app-main-footer></app-main-footer>
