@@ -1,4 +1,9 @@
 # PropertyManagementSystem
+## Topic Requirement
+`Design a mini property management admin system using Angular 17+ and Bootstrap 5. The site
+should be responsive, catering to screens from small mobile phones to large desktop screens. The
+admin system must have 3 pages viz: Dashboard, Enquiries List and Single Enquiry Page. `
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
